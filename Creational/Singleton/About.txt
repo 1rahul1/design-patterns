@@ -1,0 +1,25 @@
+It is used when we have to create only 1 instance of the class.
+
+E.g. Db connection
+
+4 ways to achieve this:
+1. Eager initialization
+2. Lazy initialziation
+3. Synchronized method
+4. Double Locking
+
+1. Eager initialization
+----------------------
+- You have to restrict the creation of an object. As contruction is reponsible for creation of an object, so make the constructor private.
+- Create an object of this class in this class and make that instance private and static. This is called eager initialzation of the object.
+- create a static method which the client can call to get the instance. e.g. getInstance().
+
+2. Lazy initialization
+----------------------
+- Same as eager but the initialization happens when any client wants to get instance. We don't proactively create and instance.
+- Problem in multi threaded scenarios. We can make the getInstance method synchronized. This is what we said 3. Synchronized method.
+    - synchronized public static DBConnection getInstance() {}
+    - There is issue with this also that this is computationally expensive as locking is done everytime when getInstance is called.
+    - 4. Double locking is used to fix this.
+        - We do locking only till the instance is null
+
