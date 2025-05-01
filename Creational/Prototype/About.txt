@@ -1,0 +1,4 @@
+It is used when we have to make Copy/ Clone from Existing Object.
+
+By this pattern,
+the cloning logic should not be the responsibility of the client. It should be responsibility of the original object. So, it should expose the clone method.
