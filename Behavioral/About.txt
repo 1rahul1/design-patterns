@@ -1,0 +1,1 @@
+Guides how different objects communicate with each other effectively and Distribute tasks effeciently, making software system flexible and easy to maintain.
