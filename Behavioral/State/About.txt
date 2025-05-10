@@ -1,0 +1,5 @@
+This pattern allows object to alter its behaviour when its internal state changes.
+
+
+- State interface will define all the operations that can be done on the object.
+- Different states will implement respt. operations and return exceptions or have default behavior for rest.
